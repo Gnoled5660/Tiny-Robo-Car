@@ -1,0 +1,8 @@
+Name,Purpose,Quantity,Total Cost (USD),Link,Distributor
+"Shipping Fee","Shipping fee",1,5.73,"https:/0","Roboter-Baustz"
+"3.7V Battery","Battery Energy source",1,0.00,"https://0","0"
+"MT3608","Voltage Converter",1,1.22,"https://www.roboter-bausatz.de/p/spannungswandler-mt3608-dc-dc-step-up-modul-2a-2v-28v?_gl=1*1klqss*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwg_nNBhAGEiwAiYPYA6XTGtO40h-yPz6tyR1IKBJdNK5iHXgb9Krs8Vv1m-kSSI-vktEsCBoCx5kQAvD_BwE&gbraid=0AAAAADKFiCDKpInD8qZdneizH37x4Pl4c","Roboter-Baustz"
+"MG90S","Steering",1,5.95,"https://www.roboter-bausatz.de/p/mg90s-micro-servo-motor?_gl=1*e0h39v*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwg_nNBhAGEiwAiYPYA6XTGtO40h-yPz6tyR1IKBJdNK5iHXgb9Krs8Vv1m-kSSI-vktEsCBoCx5kQAvD_BwE&gbraid=0AAAAADKFiCDKpInD8qZdneizH37x4Pl4c","Roboter-Baustz"
+"NC20 DC Motor","Motor",1,5.04,"https://www.roboter-bausatz.de/p/dc-motor-mit-metallgetriebe-ga12-n20-6v-100-rpm?sPartner=8&gad_source=1&gad_campaignid=12461217733&gbraid=0AAAAADKFiCDKpInD8qZdneizH37x4Pl4c&gclid=CjwKCAjwg_nNBhAGEiwAiYPYA6XTGtO40h-yPz6tyR1IKBJdNK5iHXgb9Krs8Vv1m-kSSI-vktEsCBoCx5kQAvD_BwE","Roboter-Bausatz"
+"ESP32 CAM Ai thinker","Computer Vision and Computer Processing",1,15.50,"https://www.amazon.de/diymore-Entwicklungsplatine-Entwicklung-Dual-Core-Entwicklungsplatine-Kamera-TF-Karten-Modul/dp/B0F2F24JSZ/ref=asc_df_B0F2F24JSZ?mcid=4eb23f117bbb3dcab30c87dbf8c06661&th=1&tag=googshopde-21&linkCode=df0&hvadid=741381095750&hvpos=&hvnetw=g&hvrand=13085571341949564368&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044393&hvtargid=pla-2421607560387&hvocijid=13085571341949564368-B0F2F24JSZ-&hvexpln=0","Amazon"
+"MX1508","Motor driver",1,0.00,"https://0","0"
