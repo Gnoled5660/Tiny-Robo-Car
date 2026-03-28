@@ -8,3 +8,6 @@ I have always wanted to build a car with proper steering joints. But I also came
 <img width="718" height="475" alt="Bildschirmfoto 2026-03-15 um 17 58 01" src="https://github.com/user-attachments/assets/a201b31b-cf44-40c7-82be-9e1695df6400" />
 <img width="380" height="497" alt="Bildschirmfoto 2026-03-15 um 14 44 35" src="https://github.com/user-attachments/assets/c916c802-33a8-4022-82f0-8e2ab4a50b0d" />
 <img width="723" height="548" alt="Bildschirmfoto 2026-03-21 um 21 50 06" src="https://github.com/user-attachments/assets/60b3fbc5-f985-4f7b-9c83-3aa490f4ceb8" />
+
+![IMG_8606](https://github.com/user-attachments/assets/dd2b065c-7ad0-4bcc-929b-d5d82f3bab8b)
+
