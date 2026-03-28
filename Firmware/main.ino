@@ -1,4 +1,5 @@
 #include <ESP32PWM.h>
+#include <ESP32Servo.h>
 #include <esp_camera.h>
 
 #define PWDN_GPIO_NUM 32
@@ -23,7 +24,7 @@
 #define Motor_Pin_2 13
 #define Servo_Pin 2
 
-ESP32PWM servo;
+Servo servo;
 
 int Servo_Value = 350;
 
@@ -92,28 +93,28 @@ void loop() {
   int step =4;
 
   for (int y = 0; y < height; y += step){
-    for (int x = 0; i < wdith; x += step){
+    for (int x = 0; x < width; x += step){
       int index = (y * width + x) * 2;
       uint8_t highByte = fb->buf[index];
       uint8_t lowByte = fb->buf[index+1];
 
       uint8_t r = (highByte & 0xF8);
-      uint8_t g = (highByte & 0x07 << 5) | ((lowByte & 0xE0) >> 3);
+      uint8_t g = ((highByte & 0x07) << 5) | ((lowByte & 0xE0) >> 3);
       uint8_t b = (lowByte & 0x1F) << 3;
 
-      if (r < 150 && g < 80 && b < 80){
+      if (r < 80 && g < 150 && b < 80){
         greenPixelCount++;
-        if (x < wdith / 3){
-          countLeftRed++;
+        if (x < width / 3){
+          countLeftGreen++;
         }
-        else if(x < (wdith * 2)/3){
-          countCenterRed;
+        else if(x < (width * 2)/3){
+          countCenterGreen++;
         }
         else{
-          countRightRed++;
+          countRightGreen++;
         }
       }
-      if (r < 80 && g < 150 && b < 80){
+      if (r < 150 && g < 80 && b < 80){
         redPixelCount++;
       }
     }
@@ -123,31 +124,36 @@ void loop() {
   if (greenPixelCount > redPixelCount){
     digitalWrite(Motor_Pin_1, HIGH);
     digitalWrite(Motor_Pin_2, LOW);
+    Serial.println(digitalRead(Motor_Pin_1));
+    Serial.println(digitalRead(Motor_Pin_2));
     if (countLeftGreen > threshold || countCenterGreen > threshold || countRightGreen > threshold){
       if(countLeftGreen > countCenterGreen && countLeftGreen > countRightGreen){
         servo.write(60);
+        Serial.println("GreenLeft");
       }
       else if (countCenterGreen > countLeftGreen && countCenterGreen > countRightGreen){
-        servo.write(90)
+        servo.write(90);
+        Serial.println("GreenCenter");
       }
-      else if (countRightGreen > countLeftGreen && countRightGreen > countCenterGreen)
-      servo.write(120)
+      else if (countRightGreen > countLeftGreen && countRightGreen > countCenterGreen){
+      servo.write(120);
+      Serial.println("GreenRight");
+      }
     }
   }
   else if(redPixelCount > greenPixelCount && redPixelCount > threshold){
     digitalWrite(Motor_Pin_1, LOW);
-    digitalWrite(Motor_Pin_2, LOW;
+    digitalWrite(Motor_Pin_2, LOW);
     servo.write(90);
   }
 
   else{
     digitalWrite(Motor_Pin_1, LOW);
     digitalWrite(Motor_Pin_2, LOW);
-    servo.write(90)
+    servo.write(90);
   }
   esp_camera_fb_return(fb);
   delay(50);
 }
-
 
 
